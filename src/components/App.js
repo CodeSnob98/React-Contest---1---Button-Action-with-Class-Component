@@ -19,9 +19,7 @@ class App extends Component {
                 "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
             })
           }
-        >
-          B
-        </button>
+        ></button>
         <p id="para">{this.state.para}</p>
       </div>
     );
