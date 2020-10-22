@@ -4,22 +4,32 @@ import "../styles/App.css";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { para: "" };
+    this.state = { display: false };
   }
 
   render() {
+    if (!this.state.display) {
+      return (
+        <div id="main">
+          <button
+            id="click"
+            onClick={() =>
+              this.setState({
+                display: true
+              })
+            }
+          ></button>
+        </div>
+      );
+    }
     return (
       <div id="main">
-        <button
-          id="click"
-          onClick={() =>
-            this.setState({
-              para:
-                "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
-            })
+        <button id="click"></button>
+        <p id="para">
+          {
+            "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy"
           }
-        ></button>
-        <p id="para">{this.state.para}</p>
+        </p>
       </div>
     );
   }
